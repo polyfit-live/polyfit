@@ -6,6 +6,14 @@ import WorkoutsPage from '@/pages/WorkoutsPage';
 import WorkoutsShowPage from '@/pages/WorkoutsShowPage';
 import WorkoutPlayerPage from '@/pages/WorkoutPlayerPage';
 import LoginPage from '@/pages/LoginPage';
+
+import AdminPage from '@/pages/AdminPage';
+import AdminWorkoutsPage from '@/pages/AdminWorkoutsPage';
+import AdminExercisesPage from '@/pages/AdminExercisesPage';
+import AdminUsersPage from '@/pages/AdminUsersPage';
+import AdminKpiPage from '@/pages/AdminKpiPage';
+import AdminPurposesPage from '@/pages/AdminPurposesPage';
+
 import RegistrationPage from '@/pages/RegistrationPage';
 import ProfilePage from '@/pages/ProfilePage';
 import The404 from '@/pages/The404';
@@ -56,6 +64,30 @@ const routes = [
     component: ProfilePage,
   },
 
+  {
+    path: '/admin',
+    component: AdminPage,
+  },
+      {
+        path: '/admin/workouts',
+        component: AdminWorkoutsPage,
+      },
+      {
+        path: '/admin/exercises',
+        component: AdminExercisesPage,
+      },
+      {
+        path: '/admin/users',
+        component: AdminUsersPage,
+      },
+      {
+        path: '/admin/kpi',
+        component: AdminKpiPage,
+      },
+      {
+        path: '/admin/purposes',
+        component: AdminPurposesPage,
+      },
   {
     path: '*',
     component: The404,
