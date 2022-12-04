@@ -12,6 +12,7 @@
 <script>
 import ExercisesComponent from '@/components/WorkoutsShowExercises';
 import WorkoutInfoComponent from '@/components/WorkoutsShowInfo';
+import axios from 'axios';
 
 export default {
   components: {
@@ -105,9 +106,17 @@ export default {
     };
   },
   mounted() {
-    let exercoses = this.workout.exercises;
-    this.workout = this.$route.query.item;
-    this.workout['exercises'] = exercoses;
+    let exercises = this.workout.exercises;
+    // this.workout = this.$route.query.item;
+    this.workout['exercises'] = exercises;
+  },
+  created() {
+    let url = '/api/workout/' + this.$route.params.id;
+    axios({
+      method: 'get', // you can set what request you want to be
+      url: url,
+    })
+      .then(response => (this.workout = response.data));
   },
 };
 </script>

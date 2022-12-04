@@ -3,7 +3,7 @@
     <img :src="workout.image" alt="Image for workout" class="workout__cover">
     <div clas="workout__info">
       <h2 class="workout__name">
-        {{workout.name}}
+        {{workout.title}}
       </h2>
       <ul class="workout__features-list">
         <li class="workout__features-item workout__features-item--type">
@@ -22,7 +22,7 @@
             🔥
           </p>
           <p class="workout__features-content">
-            {{workout.cal}}
+            {{workout.calories}}
           </p>
           <p class="workout__features-title">
             Ккал
@@ -56,7 +56,7 @@
           Описание
         </h3>
         <p class="workout__text">
-          {{workout.desc}}
+          {{workout.description}}
         </p>
       </div>
       <div class="workout__block">

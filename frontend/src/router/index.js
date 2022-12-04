@@ -68,26 +68,26 @@ const routes = [
     path: '/admin',
     component: AdminPage,
   },
-      {
-        path: '/admin/workouts',
-        component: AdminWorkoutsPage,
-      },
-      {
-        path: '/admin/exercises',
-        component: AdminExercisesPage,
-      },
-      {
-        path: '/admin/users',
-        component: AdminUsersPage,
-      },
-      {
-        path: '/admin/kpi',
-        component: AdminKpiPage,
-      },
-      {
-        path: '/admin/purposes',
-        component: AdminPurposesPage,
-      },
+  {
+    path: '/admin/workouts',
+    component: AdminWorkoutsPage,
+  },
+  {
+    path: '/admin/exercises',
+    component: AdminExercisesPage,
+  },
+  {
+    path: '/admin/users',
+    component: AdminUsersPage,
+  },
+  {
+    path: '/admin/kpi',
+    component: AdminKpiPage,
+  },
+  {
+    path: '/admin/purposes',
+    component: AdminPurposesPage,
+  },
   {
     path: '*',
     component: The404,

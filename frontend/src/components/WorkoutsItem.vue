@@ -1,7 +1,7 @@
 <template>
-  <router-link :to="{ path: '/workouts/'+workout.id, query: {item: workout}}" class="workouts-content__workouts-card workouts-card">
+  <router-link :to="{ path: '/workouts/'+workout.id}" class="workouts-content__workouts-card workouts-card">
     <div class="workouts-card__cover">
-      <img :src="workout.image" alt="Image for workout" class="workouts-card__image">
+      <img :src="workout.media" alt="Image for workout" class="workouts-card__image">
     </div>
     <div class="workouts-card__info">
       <div class="workouts-card__flags">
@@ -19,9 +19,9 @@
           Рекомендуем
         </p>
       </div>
-      <h3 class="workouts-card__name">{{workout.name}}</h3>
+      <h3 class="workouts-card__name">{{workout.title}}</h3>
       <p class="workouts-card__features">
-        ⏱️ {{workout.time}} мин. • 💪 {{workout.difficulty}} • 🔥 {{workout.cal}} Ккал
+        ⏱️ {{workout.time}} мин. • 💪 {{workout.difficulty}} • 🔥 {{workout.calories}} Ккал
       </p>
     </div>
   </router-link>
@@ -29,13 +29,16 @@
 
 <script>
 
+
 export default {
   name: 'WorkoutsItemComponent',
-  props: ['workout'],
-  data() {
-    return {
-      // workout: this.$route.query;
-    };
+  props: {
+    workout: {
+      type: Object,
+      default: function() {
+        return { message: 'hello' };
+      },
+    },
   },
 };
 </script>
