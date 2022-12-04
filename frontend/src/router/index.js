@@ -10,6 +10,7 @@ import RegistrationPage from '@/pages/RegistrationPage';
 import ProfilePage from '@/pages/ProfilePage';
 import The404 from '@/pages/The404';
 import VueScrollTo from 'vue-scrollto';
+import ActivityAdminPage from '@/pages/ActivityAdminPage';
 
 
 Vue.use(VueRouter);
@@ -59,6 +60,11 @@ const routes = [
   {
     path: '*',
     component: The404,
+  },
+
+  {
+    path: '/admin-test',
+    component: ActivityAdminPage,
   },
 ];
 
